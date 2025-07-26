@@ -59,7 +59,7 @@ export default function Layout({ children, currentPageName }) {
                 <Calculator className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h2 className="font-bold text-slate-900 text-lg">Cagen</h2>
+                <h2 className="font-bold text-slate-900 text-lg">CaseGen</h2>
                 <p className="text-xs text-slate-500 font-medium">Case Generator</p>
               </div>
             </Link>
@@ -101,7 +101,7 @@ export default function Layout({ children, currentPageName }) {
           <header className="bg-white border-b border-slate-200 px-6 py-4 md:hidden shadow-sm">
             <div className="flex items-center gap-4">
               <SidebarTrigger className="hover:bg-slate-100 p-2 rounded-lg transition-colors duration-200" />
-              <h1 className="text-xl font-bold text-slate-900">Cagen</h1>
+              <h1 className="text-xl font-bold text-slate-900">CaseGen</h1>
             </div>
           </header>
 

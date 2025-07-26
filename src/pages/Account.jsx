@@ -201,7 +201,7 @@ export default function Account() {
                 <strong>Pro plan</strong> (unlimited cases, all industries) — coming soon.
               </p>
               <p className="text-xs text-slate-500">
-                Join the waitlist at support@cagen.app for early access.
+                Join the waitlist at support@casegen.app for early access.
               </p>
             </div>
           </CardContent>
@@ -226,8 +226,8 @@ export default function Account() {
             </div>
             <p className="text-xs text-slate-500 mt-4">
               Need help? Contact us at{" "}
-              <a href="mailto:support@cagen.app" className="text-blue-600 hover:underline">
-                support@cagen.app
+              <a href="mailto:support@casegen.app" className="text-blue-600 hover:underline">
+                support@casegen.app
               </a>
             </p>
           </CardContent>
