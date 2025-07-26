@@ -1,8 +1,6 @@
-# Base44 App
+# CaseGen
 
-
-This app was created automatically by Base44.
-It's a Vite+React app that communicates with the Base44 API.
+This project is a Vite + React application for generating and managing practice cases.
 
 ## Running the app
 
@@ -16,5 +14,3 @@ npm run dev
 ```bash
 npm run build
 ```
-
-For more information and support, please contact Base44 support at app@base44.com.

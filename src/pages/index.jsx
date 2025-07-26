@@ -9,9 +9,6 @@ import Cases from "./Cases";
 import Case from "./Case";
 
 import Landing from "./Landing";
-
-import Auth from "./Auth";
-
 import Account from "./Account";
 
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
@@ -27,9 +24,6 @@ const PAGES = {
     Case: Case,
     
     Landing: Landing,
-    
-    Auth: Auth,
-    
     Account: Account,
     
 }
@@ -68,9 +62,6 @@ function PagesContent() {
                 <Route path="/Case" element={<Case />} />
                 
                 <Route path="/Landing" element={<Landing />} />
-                
-                <Route path="/Auth" element={<Auth />} />
-                
                 <Route path="/Account" element={<Account />} />
                 
             </Routes>
