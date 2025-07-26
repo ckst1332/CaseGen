@@ -11,6 +11,8 @@ import Case from "./Case";
 import Landing from "./Landing";
 import Account from "./Account";
 import Payments from "./Payments";
+import Login from "./Login";
+import Signup from "./Signup";
 
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 
@@ -29,6 +31,10 @@ const PAGES = {
     Account: Account,
 
     Payments: Payments,
+
+    Login: Login,
+
+    Signup: Signup,
 
 }
 
@@ -68,6 +74,8 @@ function PagesContent() {
                 <Route path="/Landing" element={<Landing />} />
                 <Route path="/Account" element={<Account />} />
                 <Route path="/Payments" element={<Payments />} />
+                <Route path="/Login" element={<Login />} />
+                <Route path="/Signup" element={<Signup />} />
 
             </Routes>
         </Layout>

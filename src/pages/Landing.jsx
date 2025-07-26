@@ -25,17 +25,36 @@ import {
   AccordionItem,
   AccordionTrigger
 } from "@/components/ui/accordion";
+import { User } from "@/api/entities";
 
 export default function Landing() {
   const [waitlistEmail, setWaitlistEmail] = useState("");
   const navigate = useNavigate();
 
   const handleStartFree = async () => {
-    navigate(createPageUrl("Dashboard"));
+    try {
+      const user = await User.me();
+      if (user?.subscription_tier) {
+        navigate(createPageUrl("Dashboard"));
+      } else {
+        window.location.href = "/signup";
+      }
+    } catch (e) {
+      window.location.href = "/signup";
+    }
   };
 
   const handleLogin = async () => {
-    navigate(createPageUrl("Dashboard"));
+    try {
+      const user = await User.me();
+      if (user) {
+        navigate(createPageUrl("Dashboard"));
+      } else {
+        window.location.href = "/login";
+      }
+    } catch (e) {
+      window.location.href = "/login";
+    }
   };
 
   return (
@@ -58,7 +77,7 @@ export default function Landing() {
             
             <div className="flex items-center gap-4">
               <Button variant="ghost" onClick={handleLogin}>
-                Go to Dashboard
+                Login
               </Button>
               <Button className="bg-blue-600 hover:bg-blue-700" onClick={handleStartFree}>
                 Get Started

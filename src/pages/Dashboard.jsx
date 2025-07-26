@@ -31,8 +31,14 @@ export default function Dashboard() {
       ]);
       setCases(casesData);
       setUser(userData);
+      if (!userData?.subscription_tier) {
+        window.location.href = "/signup";
+        return;
+      }
     } catch (error) {
       console.error("Error loading dashboard data:", error);
+      window.location.href = "/login";
+      return;
     }
     setIsLoading(false);
   };
