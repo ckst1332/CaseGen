@@ -14,18 +14,19 @@ import Account from "./Account";
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 
 const PAGES = {
-    
-    Dashboard: Dashboard,
-    
-    Generate: Generate,
-    
-    Cases: Cases,
-    
-    Case: Case,
-    
+
     Landing: Landing,
+
+    Dashboard: Dashboard,
+
+    Generate: Generate,
+
+    Cases: Cases,
+
+    Case: Case,
+
     Account: Account,
-    
+
 }
 
 function _getCurrentPage(url) {
@@ -50,7 +51,7 @@ function PagesContent() {
         <Layout currentPageName={currentPage}>
             <Routes>            
                 
-                    <Route path="/" element={<Dashboard />} />
+                    <Route path="/" element={<Landing />} />
                 
                 
                 <Route path="/Dashboard" element={<Dashboard />} />
