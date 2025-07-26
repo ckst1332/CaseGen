@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -14,6 +15,16 @@ export default function Login() {
         className="w-full max-w-md space-y-6 bg-white p-8 rounded-lg shadow"
       >
         <h1 className="text-2xl font-bold text-center">Log In</h1>
+        <div className="text-center">
+          <a
+            href="/auth/google"
+            className="inline-block w-full mb-4"
+          >
+            <Button type="button" variant="outline" className="w-full">
+              Log In with Google
+            </Button>
+          </a>
+        </div>
         <div className="space-y-2">
           <label className="text-sm font-medium text-slate-700" htmlFor="email">
             Email

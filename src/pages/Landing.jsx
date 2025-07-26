@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,16 +8,10 @@ import {
   Calculator,
   CheckCircle,
   Clock,
-  Download,
-  ChevronDown,
-  ChevronUp,
-  Star,
   Zap,
-  FileText,
-  BarChart3,
-  Target
+  BarChart3
 } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import {
   Accordion,
@@ -37,10 +31,10 @@ export default function Landing() {
       if (user?.subscription_tier) {
         navigate(createPageUrl("Dashboard"));
       } else {
-        window.location.href = "/signup";
+        navigate(createPageUrl("Signup"));
       }
     } catch (e) {
-      window.location.href = "/signup";
+      navigate(createPageUrl("Signup"));
     }
   };
 
