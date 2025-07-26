@@ -10,8 +10,13 @@ import Case from "./Case";
 
 import Landing from "./Landing";
 import Account from "./Account";
+import Login from "./Login";
+import Signup from "./Signup";
+import Subscription from "./Subscription";
+import RequireAuth from "./RequireAuth";
+import Payments from "./Payments";
 
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 
 const PAGES = {
 
@@ -26,6 +31,11 @@ const PAGES = {
     Case: Case,
 
     Account: Account,
+    Login: Login,
+    Signup: Signup,
+    Subscription: Subscription,
+
+    Payments: Payments,
 
 }
 
@@ -46,25 +56,22 @@ function _getCurrentPage(url) {
 function PagesContent() {
     const location = useLocation();
     const currentPage = _getCurrentPage(location.pathname);
-    
+
     return (
         <Layout currentPageName={currentPage}>
-            <Routes>            
-                
-                    <Route path="/" element={<Landing />} />
-                
-                
-                <Route path="/Dashboard" element={<Dashboard />} />
-                
-                <Route path="/Generate" element={<Generate />} />
-                
-                <Route path="/Cases" element={<Cases />} />
-                
-                <Route path="/Case" element={<Case />} />
-                
+            <Routes>
+                <Route path="/" element={<Landing />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="/subscription" element={<RequireAuth><Subscription /></RequireAuth>} />
+
+                <Route path="/Dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} />
+                <Route path="/Generate" element={<RequireAuth><Generate /></RequireAuth>} />
+                <Route path="/Cases" element={<RequireAuth><Cases /></RequireAuth>} />
+                <Route path="/Case" element={<RequireAuth><Case /></RequireAuth>} />
                 <Route path="/Landing" element={<Landing />} />
-                <Route path="/Account" element={<Account />} />
-                
+                <Route path="/Account" element={<RequireAuth><Account /></RequireAuth>} />
+                <Route path="/Payments" element={<Payments />} />
             </Routes>
         </Layout>
     );
