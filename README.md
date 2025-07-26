@@ -6,7 +6,8 @@ This project is a Vite + React application for generating and managing practice 
 
 ```bash
 npm install
-npm run dev
+npm run dev      # start frontend
+npm run server   # start backend
 ```
 
 ## Building the app
