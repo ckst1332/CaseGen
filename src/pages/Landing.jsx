@@ -31,11 +31,11 @@ export default function Landing() {
   const navigate = useNavigate();
 
   const handleStartFree = async () => {
-    navigate(createPageUrl("Dashboard"));
+    navigate(createPageUrl("Signup"));
   };
 
   const handleLogin = async () => {
-    navigate(createPageUrl("Dashboard"));
+    navigate(createPageUrl("Login"));
   };
 
   return (
@@ -58,10 +58,10 @@ export default function Landing() {
             
             <div className="flex items-center gap-4">
               <Button variant="ghost" onClick={handleLogin}>
-                Go to Dashboard
+                Login
               </Button>
               <Button className="bg-blue-600 hover:bg-blue-700" onClick={handleStartFree}>
-                Get Started
+                Sign Up
               </Button>
             </div>
           </div>
