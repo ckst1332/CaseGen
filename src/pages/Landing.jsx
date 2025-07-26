@@ -61,7 +61,7 @@ export default function Landing() {
               <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                 <Calculator className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-slate-900">Cagen</span>
+              <span className="text-xl font-bold text-slate-900">CaseGen</span>
             </div>
             
             <div className="hidden md:flex items-center gap-6">
@@ -377,7 +377,7 @@ export default function Landing() {
             Ready to Master Financial Modeling?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Join thousands of professionals who've improved their DCF skills with Cagen
+            Join thousands of professionals who've improved their DCF skills with CaseGen
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -401,7 +401,7 @@ export default function Landing() {
                 <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                   <Calculator className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-xl font-bold">Cagen</span>
+                <span className="text-xl font-bold">CaseGen</span>
               </div>
               <p className="text-slate-400 text-sm">
                 Master financial modeling with AI-powered practice cases and comprehensive feedback.
@@ -438,13 +438,13 @@ export default function Landing() {
           
           <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
             <div className="flex gap-6 text-sm text-slate-400 mb-4 md:mb-0">
-              <span>© 2025 Cagen. All rights reserved.</span>
+              <span>© 2025 CaseGen. All rights reserved.</span>
               <a href="#" className="hover:text-white">Privacy</a>
               <a href="#" className="hover:text-white">Terms</a>
             </div>
             <div className="text-sm text-slate-400">
-              <a href="mailto:support@cagen.app" className="hover:text-white">
-                support@cagen.app
+              <a href="mailto:support@casegen.app" className="hover:text-white">
+                support@casegen.app
               </a>
             </div>
           </div>
