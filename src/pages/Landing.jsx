@@ -17,8 +17,7 @@ import {
   BarChart3,
   Target
 } from "lucide-react";
-import { User } from "@/api/entities";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import {
   Accordion,
@@ -29,21 +28,14 @@ import {
 
 export default function Landing() {
   const [waitlistEmail, setWaitlistEmail] = useState("");
+  const navigate = useNavigate();
 
   const handleStartFree = async () => {
-    try {
-      await User.loginWithRedirect(window.location.origin + createPageUrl("Dashboard"));
-    } catch (error) {
-      console.error("Login error:", error);
-    }
+    navigate(createPageUrl("Dashboard"));
   };
 
   const handleLogin = async () => {
-    try {
-      await User.loginWithRedirect(window.location.origin + createPageUrl("Dashboard"));
-    } catch (error) {
-      console.error("Login error:", error);
-    }
+    navigate(createPageUrl("Dashboard"));
   };
 
   return (
@@ -66,7 +58,7 @@ export default function Landing() {
             
             <div className="flex items-center gap-4">
               <Button variant="ghost" onClick={handleLogin}>
-                Sign In
+                Go to Dashboard
               </Button>
               <Button className="bg-blue-600 hover:bg-blue-700" onClick={handleStartFree}>
                 Get Started
