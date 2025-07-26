@@ -15,12 +15,13 @@ import {
   Zap,
   Clock
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 
 export default function Account() {
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     loadUser();
@@ -37,8 +38,7 @@ export default function Account() {
   };
 
   const handleUpgrade = () => {
-    // TODO: Integrate with Stripe when backend functions are enabled
-    alert("Payment integration coming soon! Contact support@cagen.app for early access to paid plans.");
+    navigate(createPageUrl("Payments"));
   };
 
   const getCreditsForPlan = (tier) => {
