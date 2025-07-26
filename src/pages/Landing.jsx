@@ -37,10 +37,10 @@ export default function Landing() {
       if (user?.subscription_tier) {
         navigate(createPageUrl("Dashboard"));
       } else {
-        window.location.href = "/signup";
+        navigate(createPageUrl("Signup"));
       }
     } catch (e) {
-      window.location.href = "/signup";
+      navigate(createPageUrl("Signup"));
     }
   };
 
@@ -50,10 +50,10 @@ export default function Landing() {
       if (user) {
         navigate(createPageUrl("Dashboard"));
       } else {
-        window.location.href = "/login";
+        navigate(createPageUrl("Login"));
       }
     } catch (e) {
-      window.location.href = "/login";
+      navigate(createPageUrl("Login"));
     }
   };
 
