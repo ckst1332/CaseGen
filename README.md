@@ -14,3 +14,7 @@ npm run dev
 ```bash
 npm run build
 ```
+
+## Payments configuration
+
+Create a `.env` file based on `.env.example` and set `VITE_STRIPE_PAYMENT_LINK` to the payment link generated in your Stripe account.
