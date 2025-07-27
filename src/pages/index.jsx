@@ -15,6 +15,7 @@ import Login from "./Login";
 import Signup from "./Signup";
 
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 
 const PAGES = {
 
@@ -63,19 +64,19 @@ function PagesContent() {
                     <Route path="/" element={<Landing />} />
                 
                 
-                <Route path="/Dashboard" element={<Dashboard />} />
-                
-                <Route path="/Generate" element={<Generate />} />
-                
-                <Route path="/Cases" element={<Cases />} />
-                
-                <Route path="/Case" element={<Case />} />
+                <Route path={createPageUrl('Dashboard')} element={<Dashboard />} />
 
-                <Route path="/Landing" element={<Landing />} />
-                <Route path="/Account" element={<Account />} />
-                <Route path="/Payments" element={<Payments />} />
-                <Route path="/Login" element={<Login />} />
-                <Route path="/Signup" element={<Signup />} />
+                <Route path={createPageUrl('Generate')} element={<Generate />} />
+
+                <Route path={createPageUrl('Cases')} element={<Cases />} />
+
+                <Route path={createPageUrl('Case')} element={<Case />} />
+
+                <Route path={createPageUrl('Landing')} element={<Landing />} />
+                <Route path={createPageUrl('Account')} element={<Account />} />
+                <Route path={createPageUrl('Payments')} element={<Payments />} />
+                <Route path={createPageUrl('Login')} element={<Login />} />
+                <Route path={createPageUrl('Signup')} element={<Signup />} />
 
             </Routes>
         </Layout>
